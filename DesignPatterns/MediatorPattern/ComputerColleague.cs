@@ -16,8 +16,8 @@ namespace MediatorPattern
         /// </summary>
         public void ReceiveRegisterNotification(object sender, ColleagueArgs colleagueArgs)
         {
-            Console.WriteLine("New Computer register event with name:"
-                + colleagueArgs.Colleague + ": received @" + this);
+            Console.WriteLine($"New Computer registered with name: {colleagueArgs.Colleague.Name}." +
+                $" Received: {Name}");
         }
 
         /// <summary>
@@ -25,9 +25,8 @@ namespace MediatorPattern
         /// </summary>
         public void ReceiveUnRegisterNotification(object sender, ColleagueArgs colleagueArgs)
         {
-            Console.WriteLine("Computer left unregister event with name:"
-                + colleagueArgs.Colleague + ":received @" + this);
-            
+            Console.WriteLine($"New Computer left with name: {colleagueArgs.Colleague.Name}." +
+                $" Received: {Name}");
         }
     }
 }

@@ -2,10 +2,10 @@
 
 namespace MediatorPattern
 {
-    /* 
-     Act as a central hub for communication between different Colleagues.
-     Notifies all Concrete Colleagues on the occurrence of an event
-    */
+    /// <summary>
+    /// Act as a central hub for communication between different Colleagues.
+    /// Notifies all Concrete Colleagues on the occurrence of an event.
+    /// </summary>
     public class NetworkMediator : IMediator
     {
         public event EventHandler<ColleagueArgs> RegisterNotification = delegate { };
